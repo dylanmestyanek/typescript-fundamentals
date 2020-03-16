@@ -70,7 +70,7 @@ contactPeople("email", { name: "foo", email: "" });
 contactPeople("phone", { name: "foo", phone: 12345678 });
 
 // 🚨 mixing does not work
-contactPeople("email", { name: "foo", phone: 12345678 });
+// contactPeople("email", { name: "foo", phone: 12345678 });
 
 // (6) the lexical scope (this) of a function is part of its signature
 
@@ -93,7 +93,7 @@ function invokeSoon(cb: () => any, timeout: number) {
 }
 
 // 🚨 this is not satisfied
-invokeSoon(() => sendMessage("email"), 500);
+// invokeSoon(() => sendMessage("email"), 500);
 
 // ✅ creating a bound function is one solution
 const bound = sendMessage.bind(c, "email");
