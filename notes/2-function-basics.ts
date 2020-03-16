@@ -97,9 +97,9 @@ function invokeSoon(cb: () => any, timeout: number) {
 
 // ✅ creating a bound function is one solution
 const bound = sendMessage.bind(c, "email");
-invokeSoon(() => bound(), 500);
+// invokeSoon(() => bound(), 500);
 
 // ✅ call/apply works as well
-invokeSoon(() => sendMessage.apply(c, ["phone"]), 500);
+// invokeSoon(() => sendMessage.apply(c, ["phone"]), 500);
 
 export default {};
